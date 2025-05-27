@@ -1,24 +1,25 @@
-Genotype-Based Prediction of Metabolite Levels and Ratios
-Predict metabolite expression values from genotype data using pre-trained ridge regression models.
+# Genotype-Based Prediction of Metabolite Levels and Ratios
+### Predict metabolite expression values from genotype data using pre-trained ridge regression models.
 
-### --input= (Required)
+<pre>
+--input= (Required)
 **Path to the genotype file** in PLINK `--recode A` format. This file should contain sample IDs and SNP data, where each row represents an individual and columns include metadata (`FID`, `IID`, etc.) followed by SNP genotypes (0, 1, 2, or NA).
 
-### --id= (Required)
+--id= (Required)
 **Metabolite code** (e.g., `p23400`) corresponding to a pre-trained model. This code must match an entry in `metabo_codes.csv` and a model file named `.rds` (e.g., `p23400.rds`) in the `models/` directory.
 
-### --out= (Optional)
+--out= (Optional)
 Output file path for predictions (default: `predictions.csv`). The result will be a CSV file with two columns: `ID` and `Predicted_Value`.
 
-### --impute= (Optional)
+--impute= (Optional)
 Whether to impute missing SNPs (`TRUE` or `FALSE`, default: `FALSE`).
 
-### --list (Optional)
+--list (Optional)
 List all available metabolite codes and their corresponding model files.
 
-### --help
+--help
 Display this help message and exit.
-
+</pre>
 
 
 ## Examples
